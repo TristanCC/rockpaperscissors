@@ -6,8 +6,6 @@ function getComputerChoice(){
     return choices[(Math.floor(Math.random() * choices.length))]
 }
 
-computerInput = getComputerChoice().toUpperCase()
-
 function playRound(computerChoice, playerChoice) {
     console.log("Computer's choice: ",computerChoice)
     console.log("Player's choice: ",playerChoice)
@@ -40,13 +38,22 @@ function playRound(computerChoice, playerChoice) {
     playerInput = prompt("enter your choice, e.g 'rock', 'paper', 'scissors'").toUpperCase()
     playRound(computerInput, playerInput)
 }*/
-const rock = document.querySelector('#rock')
-const paper = document.querySelector('#paper')
-const scissors = document.querySelector('#scissors')
+
+const body = document.querySelector('body')
+body.style.cssText = "height:100vh; align-content:center; display:flex;"
+const maindiv = document.querySelector('.main')
+maindiv.style.cssText = "margin-top:auto; margin-bottom:auto; padding:50px; background-color:blue; display:flex; flex:1; justify-content:space-around"
 
 const buttons = document.querySelectorAll('button')
+buttons.forEach(button => {
+    button.style.cssText = "width:30%; height:75px"
+    button.addEventListener('click', (e) => {
 
-document.addEventListener
+        choice = e.target.id.toUpperCase()
+        computerInput = getComputerChoice().toUpperCase()
+        playRound(computerInput,choice)
+    })
+})
 
 console.log("Player score: ", playerScore, " Computer score: ", computerScore)
 

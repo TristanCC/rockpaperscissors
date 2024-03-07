@@ -36,11 +36,17 @@ function playRound(computerChoice, playerChoice) {
 
 }
 
-for(i=0;i<3;i++){
+/*for(i=0;i<3;i++){
     playerInput = prompt("enter your choice, e.g 'rock', 'paper', 'scissors'").toUpperCase()
-    computerInput = getComputerChoice()
     playRound(computerInput, playerInput)
-}
+}*/
+const rock = document.querySelector('#rock')
+const paper = document.querySelector('#paper')
+const scissors = document.querySelector('#scissors')
+
+const buttons = document.querySelectorAll('button')
+
+document.addEventListener
 
 console.log("Player score: ", playerScore, " Computer score: ", computerScore)
 
